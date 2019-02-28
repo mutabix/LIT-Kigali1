@@ -6,8 +6,6 @@ import { urlPrefix } from '../mocks/variables.json';
 import app from '../../app';
 
 dotenv.config();
-jest.setTimeout(30000);
-
 describe('SOCIAL AUTHENTICATION', () => {
   describe('User login through Twitter', () => {
     beforeAll(async () => {

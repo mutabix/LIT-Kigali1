@@ -1,4 +1,4 @@
-import { sendgrid } from '../../helpers';
+import sendgrid from '../../__mocks__/sendgrid';
 
 describe('sendgrid', () => {
   test('should send the test email', async () => {
@@ -7,5 +7,5 @@ describe('sendgrid', () => {
     expect(res).toBeDefined();
     expect(res.length).toBeGreaterThan(0);
     expect(res[0].statusCode).toBe(202);
-  }, 30000);
+  });
 });

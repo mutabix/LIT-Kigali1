@@ -1,5 +1,7 @@
 module.exports = {
+  verbose: true,
   testEnvironment: 'node',
+  setupFiles: ['./jest.setup.js'],
   moduleFileExtensions: ['js', 'jsx', 'json', 'node'],
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(ts|js)x?$',
   coveragePathIgnorePatterns: [
@@ -15,7 +17,6 @@ module.exports = {
     'ui'
   ],
   coverageDirectory: 'coverage',
-  collectCoverageFrom: ['**/*.js'],
   coverageThreshold: {
     global: {
       functions: 80,

@@ -13,7 +13,6 @@ const email = 'test_login@gmail.com';
 const username = 'test_login';
 const password = '123456';
 const fakeSlug = 'fake-slug';
-jest.setTimeout(30000);
 describe('articles', () => {
   beforeAll(async done => {
     const encryptedPassword = bcrypt.hashSync('123456', 10);

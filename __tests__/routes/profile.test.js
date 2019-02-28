@@ -8,7 +8,6 @@ import app from '../../app';
 const { JWT_SECRET } = process.env;
 
 let testUserToken;
-jest.setTimeout(50000);
 describe('Profile', () => {
   beforeAll(async done => {
     const { body } = await request(app)
@@ -46,7 +45,9 @@ describe('Profile', () => {
       });
 
     expect(res.status).toBe(200);
-    expect(res.body.message).toBe('Your email has changed. Please check your email for confirmation');
+    expect(res.body.message).toBe(
+      'Your email has changed. Please check your email for confirmation'
+    );
     expect(res.body.user.firstName).toBe(profile.firstName);
     expect(res.body.user.lastName).toBe(profile.lastName);
     expect(res.body.user.username).toBe(profile.username);

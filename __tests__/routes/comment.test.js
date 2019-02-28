@@ -10,7 +10,6 @@ let loginUser1;
 let loginUser2;
 let newArticle;
 let newComment;
-jest.setTimeout(50000);
 describe('comments', () => {
   beforeAll(async () => {
     let res = await request(app)
